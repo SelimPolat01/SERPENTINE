@@ -21,13 +21,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("FLASK_SECRET_KEY")
+app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY")
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
-OWN_EMAIL = os.getenv("OWN_EMAIL")
-OWN_PASSWORD = os.getenv("OWN_PASSWORD")
-GMAIL_API_KEY=os.getenv("GMAIL_API_KEY")
+OWN_EMAIL = os.environ.get("OWN_EMAIL")
+OWN_PASSWORD = os.environ.get("OWN_PASSWORD")
+GMAIL_API_KEY= os.environ.get("GMAIL_API_KEY")
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
@@ -60,7 +60,7 @@ def load_user(user_id):
 # CREATE DATABASE
 class Base(DeclarativeBase):
     pass
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DB_URI","sqlite:///blog.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI","sqlite:///blog.db")
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
