@@ -162,7 +162,6 @@ h1, .h1 {
   display: flex;
   align-items: center;
   justify-content: flex-start;  /* logoyu sola hizala */
-  padding: 0 20px;              /* isteğe bağlı iç boşluk */
 }
 
 .navbar-brand {

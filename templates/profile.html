@@ -2,4 +2,22 @@
 {% block title %}Profile{% endblock %}
 {% block content %}
 
+<div style="display: flex; align-items: center; margin-top: 80px; background-color: #181E0A;padding:20px 30px; border-radius: 50px;
+">
+  <img src="{{ current_user.email | gravatar }}" alt="Profil Fotoğrafı" style="border-radius: 50%; width: 100px; height: 100px; margin-right: 20px;" />
+
+  <div style="flex-grow: 1;">
+    <h1 style="margin: 4px 0; font-size: 1em; color: white;">@{{ current_user.name }}</h1>
+    <p style="margin: 0; font-size: 14px; color: grey;">1. Seviye</p>
+  </div>
+
+ <div style="display: flex; flex-direction: column; align-items: center; margin-left: 30px; color: white;">
+    <h1 style="font-size: 1em; margin: 0;">0</h1>
+    <p style="font-size: 12px; margin: 0;color: grey;">Beğenilen Gönderiler</p>
+  </div>
+     <div style="display: flex; flex-direction: column; align-items: center; margin-left: 30px; color: white;">
+    <h1 style="font-size: 1em; margin: 0;">0</h1>
+    <p style="font-size: 12px; margin: 0;color: grey;">Beğenilen Yorumlar</p>
+  </div>
+</div>
 {% endblock %}
