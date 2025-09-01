@@ -1,6 +1,7 @@
-{% from "bootstrap5/form.html" import render_form %} {% block content %} {%
-include "header.html" %}
-
+{% from "bootstrap5/form.html" import render_form %}
+{% extends "base.html" %}
+{% block title %}Giriş Yap{% endblock %}
+{% block content %}
 <!-- Page Header -->
 <header
   class="masthead"
@@ -36,5 +37,5 @@ include "header.html" %}
     </div>
   </div>
 </main>
+{% endblock %}
 
-{% include "footer.html" %} {% endblock %}

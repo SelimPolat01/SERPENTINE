@@ -1,5 +1,7 @@
-{% include "header.html" %}
 {% from 'bootstrap5/form.html' import render_form %}
+{% extends "base.html" %}
+{% block title %}Gönderi{% endblock %}
+{% block content %}
 <!-- Page Header-->
 <header class="masthead" style="background-image: url('{{post.img_url}}')">
   <div class="container position-relative px-4 px-lg-5">
@@ -113,5 +115,4 @@
     </div>
   </div>
 </article>
-
-{% include "footer.html" %}
+{% endblock %}

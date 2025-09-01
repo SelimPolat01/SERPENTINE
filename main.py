@@ -394,6 +394,10 @@ def send_email(subject,to,body):
     mail.send(msg)
     return "Email sent!"
 
+@app.route("/profile",methods=["GET","POST"])
+def profile():
+    return render_template("profile.html",logged_in=current_user.is_authenticated)
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
